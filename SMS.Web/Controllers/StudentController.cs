@@ -19,9 +19,11 @@ namespace SMS.Web.Controllers
         public IActionResult Index()
         {
             // TBC - load students using service and pass to view
+        var students = svc.GetStudents();
+
            
             
-            return View();
+            return View(students);
         }
 
         // GET /student/details/{id}
@@ -41,6 +43,7 @@ namespace SMS.Web.Controllers
         public IActionResult Create()
         {
             // display blank form to create a student
+        var s = new Student {Email= "mail.com"};
             return View();
         }
 

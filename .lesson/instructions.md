@@ -21,7 +21,7 @@ At the end of this practical we will have a simple but functional web applicatio
     - Complete the ```Create.cshtml``` view by making the necessary amendments listed in the view file. Each form input ```div``` contains a ```label```, ```input``` and ```span``` element and should have the necessary ```asp-for``` and ```asp-validation-for``` properties added. See the ```Name``` input for an example.
     - Modify the ```Student.cs``` model in the SMS.Data.Models package and add validation attributes as follows. 
         - Name, Course, Age, Email, Grade are ```[Required]```
-        - Age should be in a ```[Range(16-80)]``` and Grade in a ```[Range(0-100)]``` 
+        - Age should be in a ```[Range(16,80)]``` and Grade in a ```[Range(0,100)]``` 
         - Email should be an ```[EmailAddress]```
         - PhotoUrl a ```[Url]```
     - Complete the StudentControllers  ```Create(Student s)``` action (POST) so that it saves the validated student using the service method ```AddStudent(...)```, before redirecting to the Index view

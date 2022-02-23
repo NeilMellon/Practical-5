@@ -6,19 +6,19 @@
     <div class="col-8 card rounded shadow pt-3">
         <dl class="row">       
             <dt class="col-5">Name</dt>
-            <dd class="col-7"></dd>
+            <dd class="col-7">@Model.Name</dd>
 
             <dt class="col-5">Course</dt>
-            <dd class="col-7"></dd>
+            <dd class="col-7">@Model.Course</dd>
             
             <dt class="col-5">Age</dt>
-            <dd class="col-7"></dd>
+            <dd class="col-7">@Model.Age</dd>
             
             <dt class="col-5">Email</dt>
-            <dd class="col-7">/dd>
+            <dd class="col-7">@Model.Email </dd>
 
                 <dt class="col-5">Classification</dt>
-            <dd class="col-7"></dd>
+            <dd class="col-7">@Model.Classification</dd>
         </dl>
     </div>
     <!-- Photo -->
@@ -35,3 +35,6 @@
     <!-- add navigation link to Delete action, passing the correct route id parameter --> 
    
 </div>
+
+<button type="button" class="btn btn-primary">Index</button>
+<a class="btn btn-secondary" href="SMS.Test/Views/Student/Create.cshtml">Index</a>
