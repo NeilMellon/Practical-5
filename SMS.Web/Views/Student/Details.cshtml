@@ -23,18 +23,18 @@
     </div>
     <!-- Photo -->
     <div class="col-4">
-        <img src="" class="img-fluid">
+        <img src="@Model.PhotoUrl" class="img-fluid">
     </div>
 </div>
 
 <div class="mt-4">
     <!-- add navigation link to redirect to Index action -->
-    
+    <a asp-controller="Student" asp-action="Index" class="btn btn-primary">Home</a>
     <!-- add navigation link to Details action, passing the correct route id parameter --> 
-   
+    <a asp-controller="Student" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
     <!-- add navigation link to Delete action, passing the correct route id parameter --> 
+    <a asp-controller="Student" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+
    
 </div>
 
-<button type="button" class="btn btn-primary">Index</button>
-<a class="btn btn-secondary" href="SMS.Test/Views/Student/Create.cshtml">Index</a>

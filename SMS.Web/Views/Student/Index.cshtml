@@ -2,7 +2,7 @@
 
 <h3 class="mb-3">Student List</h3>
 
-<a asp-controller="Student" asp-action="Create" class btn btn-primary">Create</a>
+<a asp-controller="Student" asp-action="Create" class="btn btn-primary mb-3">Create</a>
 
 <table class="table table-hover">
     <thead>
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
             @foreach (var s in Model)
-{
+            {
 
             <tr>
                 <td>@s.Id</td>
@@ -28,7 +28,7 @@
 
                 </td>
             </tr>
-}
+            }
         
     </tbody>
 </table>

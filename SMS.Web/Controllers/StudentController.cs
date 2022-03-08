@@ -32,6 +32,11 @@ namespace SMS.Web.Controllers
             // retrieve the student with specifed id from the service
             var s = svc.GetStudent(id);
 
+            if (s==null)
+            {
+                return NotFound();
+            }
+
             // TBC check if s is null and return NotFound()
             
 
@@ -43,8 +48,8 @@ namespace SMS.Web.Controllers
         public IActionResult Create()
         {
             // display blank form to create a student
-        var s = new Student {Email= "mail.com"};
-            return View();
+            var s = new Student {Email= "@mail.com"};
+            return View(s);
         }
 
         // POST /student/create
@@ -55,7 +60,7 @@ namespace SMS.Web.Controllers
             if (ModelState.IsValid)
             {
                 // TBC call service AddStudent method using data in s
-                
+                var student = svc.AddStudent(s.Name,s.Course,s.Email,s.Age,s.Grade,s.PhotoUrl);
                 return RedirectToAction(nameof(Index));
             }
             
@@ -70,6 +75,10 @@ namespace SMS.Web.Controllers
             var s = svc.GetStudent(id);
 
             // TBC check if s is null and return NotFound()
+             if (s==null)
+            {
+                return NotFound();
+            }
               
 
             // pass student to view for editing
@@ -84,7 +93,7 @@ namespace SMS.Web.Controllers
             if (ModelState.IsValid)
             {
                 // TBC pass data to service to update
-               
+               var student = svc.UpdateStudent(s);
 
                 return RedirectToAction(nameof(Index));
             }
